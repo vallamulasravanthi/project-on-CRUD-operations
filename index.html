@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type='text/javascript'>
+      
+   function addFields(){
+
+            var number = document.getElementById("Attribute").value;
+            
+            var container = document.getElementById("container");
+            
+           while (container.hasChildNodes()) {
+                container.removeChild(container.lastChild);
+            }
+            for (i=0;i<number;i++){
+               
+                container.appendChild(document.createTextNode("Enter Column Name" + (i+1)));
+                
+                var input = document.createElement("input");
+                input.type = "text";
+                input.name = "Attribute" + i;
+                container.appendChild(input);
+         
+                
+                container.appendChild(document.createTextNode("Enter Data type" + (i+1)));
+                
+                var input = document.createElement("input");
+                input.type = "text";
+                input.name = "Attribute" + i;
+                container.appendChild(input);
+         
+                container.appendChild(document.createElement("br"));
+            }
+        }
+    </script>
+    </head>
+    <body bgcolor="white">
+    <font color="white"> 
+    <h1><marquee direction="right" height=50 bgcolor="black">CRUD OPERATIONS</marquee></h1>
+    </font>
+        
+    <div style="background-color:orange">
+  <button type="button" onclick="myFunction1()">Create Table   </button><br>
+  <div id="click1">
+    
+Enter Table Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="text" ><br>
+Enter Primary Key:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text"><br>
+Enter No.of Columns: <input type="text" id="Attribute" name="member" value=""><br />
+    <a href="#" id="filldetails" onclick="addFields()"> Add</a>
+    <center><input  type="submit" ></center>
+    <div id="container"/>  
+    
+
+</div>
+<script>
+function myFunction1() {
+  var x = document.getElementById("click1");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+</script>
+</div>
+
+
+
+
+
+<div style="background-color:orange">
+<button type="button" onclick="myFunction2()">Retrieve Table</button><br>
+<div id="click2">
+Enter Table Name:&nbsp;&nbsp;&nbsp;&nbsp;  <input type="text" ><br>
+Enter Primary Key:&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" ><br>
+
+<center><input  type="submit" ></center>
+<div>
+</div>
+<script>
+function myFunction2() {
+  var x = document.getElementById("click2");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+</script>
+</div>
+
+
+
+<div style="background-color:red">
+<button type="button" onclick="myFunction3()">Update Table</button><br>
+<div id="click3">
+Enter Table Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <input type="text" ><br>
+Enter Primary Key:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" ><br>
+Enter Column Name:&nbsp;&nbsp;<input type="text" ><br>
+Enter Value:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text">
+<center><input  type="submit" ></center>
+<div>
+</div>
+<script>
+function myFunction3() {
+  var x = document.getElementById("click3");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+</script>
+</div>
+
+
+
+<div style="background-color:red">
+<button type="button" onclick="myFunction4()">Delete Table</button><br>
+<div id="click4">
+Enter Table Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <input type="text" ><br>
+Enter Primary Key:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" ><br>
+<center><input type="submit"></center>
+</div>
+</div>
+<script>
+function myFunction4() {
+  var x = document.getElementById("click4");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+</script>
+</div>
+</body>
+</html>
