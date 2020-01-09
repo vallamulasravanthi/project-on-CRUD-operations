@@ -1,3 +1,8 @@
+/*This java project dynamically handles DDL and DML operations.
+It allows you to dynamically create a table of arbitary size(variable no of columns)
+and datatype.
+Based on the datatype,an appropriate table is created which is manipulated 
+via CRUD operations*/
 
 import java.sql.Connection;
 import java.sql.DriverManager;
